@@ -89,4 +89,10 @@ class DiiTest extends TestCase
     {
         $this->assertInstanceOf(CLogger::class, $this->dii->getLogger());
     }
+
+    public function testImportWithInvalidArgument(): void
+    {
+        $this->expectException(CException::class);
+        $this->dii->import('.');
+    }
 }

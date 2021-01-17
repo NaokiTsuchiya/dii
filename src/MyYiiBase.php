@@ -12,7 +12,9 @@
 
 namespace Koriym\Dii;
 
+use CException;
 use CLogger;
+use ReflectionClass;
 use Yii;
 use function dirname;
 use function explode;
