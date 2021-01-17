@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Koriym\Dii;
 
 use CException;
+use CLogger;
 use CLogRouter;
 use Koriym\Dii\Context\Test;
 use PHPUnit\Framework\TestCase;
+use Yii;
 
 class DiiTest extends TestCase
 {
@@ -76,5 +78,15 @@ class DiiTest extends TestCase
     {
         $this->expectException(CException::class);
         $this->dii->createComponent([]); // no class
+    }
+
+    public function testYiiIsDii(): void
+    {
+        $this->assertInstanceOf(Dii::class, new Yii());
+    }
+
+    public function testGetLogger(): void
+    {
+        $this->assertInstanceOf(CLogger::class, $this->dii->getLogger());
     }
 }
