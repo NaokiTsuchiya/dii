@@ -18,4 +18,4 @@ $config = __DIR__ . '/protected/config/main.php';
 Dii::setContext(Test::class);
 
 // create a Web application instance and run
-Dii::createWebApplication($config)->run();
+Yii::createWebApplication($config)->run();

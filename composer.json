@@ -33,6 +33,7 @@
       "Koriym\\Dii\\": "src/"
     },
     "files": [
+      "yiidii.php",
       "autoload.php"
     ]
   },

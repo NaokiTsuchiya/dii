@@ -12,6 +12,7 @@
 
 namespace Koriym\Dii;
 
+use CLogger;
 use Yii;
 use function dirname;
 use function explode;
